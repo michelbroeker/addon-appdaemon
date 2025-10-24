@@ -44,6 +44,8 @@ fi
 
 # Install user configured/requested packages
 if bashio::config.has_value 'system_packages'; then
+    export MAKEFLAGS="-1"
+    echo $MAKEFLAGS
     apk update \
         || bashio::exit.nok 'Failed updating Alpine packages repository indexes'
 
