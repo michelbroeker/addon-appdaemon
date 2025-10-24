@@ -18,7 +18,9 @@ RUN \
         build-base=0.5-r3 \
         python3-dev=3.12.12-r0 \
     \
-    && export MAKEFLAGS="-j1"
+    && export MAKEFLAGS="-j1"\
+    \
+    && echo $MAKEFLAGS\
     \
     && apk add --no-cache \
         py3-pip=25.1.1-r0 \
